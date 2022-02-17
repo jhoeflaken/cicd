@@ -17,7 +17,7 @@ sudo unzip /usr/local/graphdb/install-files.zip -d /usr/local/graphdb
 sudo rm -f /usr/local/graphdb/install-files.zip
 
 # create a systemd service unit
-sudo cat /usr/local/systemd/system/graphdb.service <<EOF
+sudo cat /etc/systemd/system/graphdb.service <<EOF
 [Unit]
 Description=GraphDB Server (running on port 7200)
 WantedBy=multi-user.target
