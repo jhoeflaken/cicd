@@ -1,0 +1,13 @@
+[Unit]
+Description=GraphDB Server (running on port 7200)
+WantedBy=multi-user.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb.pid
+ExecStart=/usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb -d -p /usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb.pid
+ExecStop=/bin/kill -15 $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
