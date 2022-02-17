@@ -150,7 +150,7 @@ resource installGraphDB 'Microsoft.Compute/virtualMachines/extensions@2021-11-01
       typeHandlerVersion: '2.1'
       autoUpgradeMinorVersion: true
       protectedSettings: {
-        commandToExecute: 'sh install-graphdb.sh'
+        commandToExecute: 'install-graphdb.sh'
         fileUris: [
           'https://raw.githubusercontent.com/jhoeflaken/cicd/main/scripts/install-graphdb.sh'
         ]
