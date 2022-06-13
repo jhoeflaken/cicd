@@ -33,22 +33,21 @@ main() {
 
     echo "${BLUE}Adding x2go PPA repo...${RESET}"
 
-    apt-get install -y software-properties-common
+    sudo apt-get install -y software-properties-common
 
-    add-apt-repository -y ppa:x2go/stable
+    sudo add-apt-repository -y ppa:x2go/stable
 
 
     echo "${BLUE}Updating apt package repository...${RESET}"
 
-    apt-get update
+    sudo apt-get update
 
     sleep 2
 
 
     echo "${BLUE}Intalling XFCE4 desktop and x2go server...${RESET}"
 
-    apt-get install -y xfce4 x2goserver x2goserver-xsession
-
+    sudo apt-get install -y xfce4 x2goserver x2goserver-xsession
 
     echo "${GREEN}XFCE4 desktop and x2go successfully installed!${RESET}"
 }
