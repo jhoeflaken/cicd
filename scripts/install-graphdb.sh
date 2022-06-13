@@ -4,8 +4,12 @@ downloadLocation='https://download.ontotext.com/owlim/b691074a-2c3d-11ec-9319-42
 echo "Start: GraphDB installation script"
 
 # update
+sudo add-apt-repository -y ppa:x2go/stable
 sudo apt update -y
-sudo apt install unzip -y
+sudo apt install unzip software-properties-common -y
+
+# install x2go and xfce4
+sudo apt-get install -y xfce4 x2goserver x2goserver-xsession firefox
 
 # install JRE
 sudo apt install default-jre -y
@@ -25,7 +29,7 @@ WantedBy=multi-user.target
 [Service]
 Type=forking
 PIDFile=/usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb.pid
-ExecStart=/usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb -d -p /usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb.pid
+ExecStart=/usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb -d -p /usr/local/graphdb/graphdb-se-9.10.0/bin/graphdb.pid -Xmx2560m
 ExecStop=/bin/kill -15 $MAINPID
 Restart=always
 
