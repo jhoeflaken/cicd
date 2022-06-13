@@ -47,7 +47,7 @@ main() {
 
     echo "${BLUE}Intalling XFCE4 desktop and x2go server...${RESET}"
 
-    sudo apt-get install -y xfce4 x2goserver x2goserver-xsession
+    sudo apt-get install -y xfce4 x2goserver x2goserver-xsession firefox
 
     echo "${GREEN}XFCE4 desktop and x2go successfully installed!${RESET}"
 }
